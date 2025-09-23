@@ -37,7 +37,7 @@ $(OBJS_DIR)%.o : $(SRCS_DIR)%.c $(HEADER)*
 	@mkdir -p $(OBJS_DIR)
 	$(CC) $(CC_FLAGS) -c $< -o $@
 
-$(NAME): $(OBJS) $(LIBFT_OBJS_DIR)
+$(NAME): check-readline $(OBJS) $(LIBFT_OBJS_DIR)
 	$(CC) $(CC_FLAGS) $(OBJS) libft/libft.a -o $(NAME) -lreadline -L $(READLINE_LIB)
 
 
